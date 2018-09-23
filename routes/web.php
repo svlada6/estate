@@ -11,6 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/{path?}', function($path = null){
+    return view('root');
+})->where('path', '.*'); 

@@ -1,221 +1,19 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import Nav from './Nav.js';
+import Nav from './nav.js';
+import SearchBox from './../searchBox/searchBox.js';
 
-
-export default class Body extends Component {
+export default class Home extends Component {
     render() {
         return (
-            <div className="wrapper">
-
-                <div className="navigation">
-                    <div className="secondary-navigation">
-                        <div className="container">
-                            <div className="contact">
-                                <figure><strong>Phone:</strong>+1 810-991-3842</figure>
-                                <figure><strong>Email:</strong>zoner@example.com</figure>
-                            </div>
-                            <div className="user-area">
-                                <div className="actions">
-                                    <a href="create-agency.html" className="promoted">Create Agency</a>
-                                    <a href="create-account.html" className="promoted"><strong>Register</strong></a>
-                                    <a href="sign-in.html">Sign In</a>
-                                </div>
-                                <div className="language-bar">
-                                    <a href="#" className="active"><img src="assets/img/flags/gb.png" alt="" /></a>
-                                    <a href="#"><img src="assets/img/flags/de.png" alt="" /></a>
-                                    <a href="#"><img src="assets/img/flags/es.png" alt="" /></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="container">
-                        <header className="navbar" id="top" role="banner">
-                            <div className="navbar-header">
-                                <button className="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
-                                    <span className="sr-only">Toggle navigation</span>
-                                    <span className="icon-bar"></span>
-                                    <span className="icon-bar"></span>
-                                    <span className="icon-bar"></span>
-                                </button>
-                                <div className="navbar-brand nav" id="brand">
-                                    <a href="index-google-map-fullscreen.html"><img src="assets/img/logo.png" alt="brand" /></a>
-                                </div>
-                            </div>
-                            <Nav />
-                            >
-                <div className="add-your-property">
-                                <a href="submit.html" className="btn btn-default"><i className="fa fa-plus"></i><span className="text">Add Your Property</span></a>
-                            </div>
-                        </header>
-                    </div>
-                </div>
-
+            <div>
                 <div className="container">
                     <div className="geo-location-wrapper">
                         <span className="btn geo-location"><i className="fa fa-map-marker"></i><span className="text">Find My Position</span></span>
                     </div>
                 </div>
-
-
                 <div id="map"></div>
-
-
-
-                <div className="search-box-wrapper">
-                    <div className="search-box-inner">
-                        <div className="container">
-                            <div className="search-box map">
-                                <ul className="nav nav-pills">
-                                    <li className="active"><a href="#search-form-sale" data-toggle="tab">Sale</a></li>
-                                    <li><a href="#search-form-rent" data-toggle="tab">Rent</a></li>
-                                </ul>
-                                <div className="tab-content">
-                                    <div className="tab-pane fade in active" id="search-form-sale">
-                                        <form role="form" id="form-map-sale" className="form-map form-search clearfix">
-                                            <div className="row">
-                                                <div className="col-md-2 col-sm-4">
-                                                    <div className="form-group">
-                                                        <select name="form-sale-country">
-                                                            <option value="">Country</option>
-                                                            <option value="1">France</option>
-                                                            <option value="2">Great Britain</option>
-                                                            <option value="3">Spain</option>
-                                                            <option value="4">Russia</option>
-                                                            <option value="5">United States</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                                <div className="col-md-2 col-sm-4">
-                                                    <div className="form-group">
-                                                        <select name="form-sale-city">
-                                                            <option value="">City</option>
-                                                            <option value="1">New York</option>
-                                                            <option value="2">Los Angeles</option>
-                                                            <option value="3">Chicago</option>
-                                                            <option value="4">Houston</option>
-                                                            <option value="5">Philadelphia</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                                <div className="col-md-2 col-sm-4">
-                                                    <div className="form-group">
-                                                        <select name="form-sale-district">
-                                                            <option value="">District</option>
-                                                            <option value="1">Manhattan</option>
-                                                            <option value="2">The Bronx</option>
-                                                            <option value="3">Brooklyn</option>
-                                                            <option value="4">Queens</option>
-                                                            <option value="5">Staten Island</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                                <div className="col-md-2 col-sm-4">
-                                                    <div className="form-group">
-                                                        <select name="form-sale-property-type">
-                                                            <option value="">Property Type</option>
-                                                            <option value="1">Apartment</option>
-                                                            <option value="2">Condominium</option>
-                                                            <option value="3">Cottage</option>
-                                                            <option value="4">Flat</option>
-                                                            <option value="5">House</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                                <div className="col-md-2 col-sm-4">
-                                                    <div className="form-group">
-                                                        <select name="form-sale-price">
-                                                            <option value="">Price</option>
-                                                            <option value="1">$10,000 +</option>
-                                                            <option value="2">$50,000 +</option>
-                                                            <option value="3">$100,000 +</option>
-                                                            <option value="4">$500,000 +</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                                <div className="col-md-2 col-sm-4">
-                                                    <div className="form-group">
-                                                        <button type="submit" className="btn btn-default">Search Sale</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </form>
-                                    </div>
-                                    <div className="tab-pane fade" id="search-form-rent">
-                                        <form role="form" id="form-map-rent" className="form-map form-search clearfix">
-                                            <div className="row">
-                                                <div className="col-md-2 col-sm-4">
-                                                    <div className="form-group">
-                                                        <select name="form-rent-city">
-                                                            <option value="">City</option>
-                                                            <option value="1">New York</option>
-                                                            <option value="2">Los Angeles</option>
-                                                            <option value="3">Chicago</option>
-                                                            <option value="4">Houston</option>
-                                                            <option value="5">Philadelphia</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                                <div className="col-md-2 col-sm-4">
-                                                    <div className="form-group">
-                                                        <select name="form-rent-district">
-                                                            <option value="">District</option>
-                                                            <option value="1">Manhattan</option>
-                                                            <option value="2">The Bronx</option>
-                                                            <option value="3">Brooklyn</option>
-                                                            <option value="4">Queens</option>
-                                                            <option value="5">Staten Island</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                                <div className="col-md-2 col-sm-4">
-                                                    <div className="form-group">
-                                                        <select name="form-rent-property-type">
-                                                            <option value="">Property Type</option>
-                                                            <option value="1">Apartment</option>
-                                                            <option value="2">Condominium</option>
-                                                            <option value="3">Cottage</option>
-                                                            <option value="4">Flat</option>
-                                                            <option value="5">House</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                                <div className="col-md-2 col-sm-4">
-                                                    <div className="form-group">
-                                                        <select name="form-rent-payment">
-                                                            <option value="">Payment</option>
-                                                            <option value="1">Monthly</option>
-                                                            <option value="2">Quarterly</option>
-                                                            <option value="3">Yearly</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                                <div className="col-md-2 col-sm-4">
-                                                    <div className="form-group">
-                                                        <select name="form-rent-price">
-                                                            <option value="">Price</option>
-                                                            <option value="1">$100 +</option>
-                                                            <option value="2">$500 +</option>
-                                                            <option value="2">$1000 +</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                                <div className="col-md-2 col-sm-4">
-                                                    <div className="form-group">
-                                                        <button type="submit" className="btn btn-default">Search Rent</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-
+                <SearchBox/>
                 <div id="page-content">
                     <section id="banner">
                         <div className="block has-dark-background background-color-default-darker center text-banner">
@@ -748,8 +546,4 @@ export default class Body extends Component {
             </div>
         );
     }
-}
-
-if (document.getElementById('example')) {
-    ReactDOM.render(<Example />, document.getElementById('example'));
 }
