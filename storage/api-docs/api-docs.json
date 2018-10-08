@@ -1571,9 +1571,16 @@
                 ],
                 "parameters": [
                     {
-                        "name": "name",
+                        "name": "first_name",
                         "in": "query",
-                        "description": "username",
+                        "description": "firstName",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "last_name",
+                        "in": "query",
+                        "description": "lastName",
                         "required": true,
                         "type": "string"
                     },
@@ -1581,6 +1588,20 @@
                         "name": "email",
                         "in": "query",
                         "description": "email",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "password",
+                        "in": "query",
+                        "description": "password",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "password2",
+                        "in": "query",
+                        "description": "password2",
                         "required": true,
                         "type": "string"
                     },

@@ -16,4 +16,8 @@ Route::group([
     Route::post('refreshToken', 'AuthController@refresh');
     Route::post('authenticatedUser', 'AuthController@authenticatedUser');
 
+    Route::post('users', 'Front\Register\RegisterController@postCreate');
+
+
+
 });

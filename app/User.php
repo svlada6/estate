@@ -5,10 +5,13 @@ namespace App;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Tymon\JWTAuth\Contracts\JWTSubject;
+use Zizaco\Entrust\Traits\EntrustUserTrait;
+use App\Role;
 
 class User extends Authenticatable implements JWTSubject
 {
     use Notifiable;
+    use EntrustUserTrait;
 
     /**
      * The attributes that are mass assignable.
@@ -16,7 +19,7 @@ class User extends Authenticatable implements JWTSubject
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'first_name', 'last_name', 'email', 'password',
     ];
 
     /**
@@ -48,5 +51,17 @@ class User extends Authenticatable implements JWTSubject
     public function getJWTCustomClaims()
     {
         return [];
+    }
+
+    public function postCreate($data) {
+       // $role = Role::findOrFail(1);
+        $user =  User::create([
+              'first_name' => $data['first_name'],
+              'last_name'  => $data['last_name'],
+              'email'      => $data['email'],
+              'password'   => bcrypt($data['password'])
+            ]);
+        $user->roles()->attach(1);
+        return $user;
     }
 }

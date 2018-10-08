@@ -7,70 +7,61 @@ export default class Register extends Component {
             <div id="page-content">
                 <div className="container">
                     <ol className="breadcrumb">
-                        <li><a href="#">Home</a></li>
-                        <li className="active">Create an Account</li>
+                        <li><a href="#">Početna</a></li>
+                        <li className="active">Kreiraj Nalog</li>
                     </ol>
                 </div>
 
 
                 <div className="container">
-                    <header><h1>Create an Account</h1></header>
+                    <header><h1>Kreiraj Nalog</h1></header>
                     <div className="row">
                         <div className="col-md-4 col-sm-6 col-md-offset-4 col-sm-offset-3">
-                            <h3>Account Type</h3>
+                            <h3>Vrsta Naloga</h3>
                             <form role="form" id="form-create-account" method="post" >
                                 <div className="radio" id="create-account-user">
                                     <label>
-                                        <input type="radio" id="account-type-user" name="account-type" required />Regular User
+                                        <input type="radio" id="account-type-user" name="account-type" required />Običan korisnik
                                     </label>
                                 </div>
                                 <div className="radio" id="agent-switch" data-agent-state="">
                                     <label>
-                                        <input type="radio" id="account-type-agent" name="account-type" required />Agent
+                                        <input type="radio" id="account-type-agent" name="account-type" required />Agencija
                                     </label>
-                                </div>
-                                <div id="agency" className="disabled">
-                                    <div className="form-group">
-                                        <label for="account-agency">Select your agency:</label>
-                                        <select name="account-agency" id="account-agency">
-                                            <option value="">Agency</option>
-                                            <option value="1">Estate+</option>
-                                            <option value="2">Northfolk Eastate</option>
-                                            <option value="3">Maximum Properties</option>
-                                            <option value="4">Edd's Homes</option>
-                                            <option value="5">Will & Scotch</option>
-                                        </select>
-                                    </div>
                                 </div>
                                 <hr />
                                 <div className="form-group">
-                                    <label for="form-create-account-full-name">Full Name:</label>
-                                    <input type="text" className="form-control" id="form-create-account-full-name" required />
+                                    <label for="form-create-account-first-name">Ime:</label>
+                                    <input type="text" className="form-control" id="form-create-account-first-name" required />
+                                </div>
+                                <div className="form-group">
+                                    <label for="form-create-account-last-name">Prezime:</label>
+                                    <input type="text" className="form-control" id="form-create-account-last-name" required />
                                 </div>
                                 <div className="form-group">
                                     <label for="form-create-account-email">Email:</label>
                                     <input type="email" className="form-control" id="form-create-account-email" required />
                                 </div>
                                 <div className="form-group">
-                                    <label for="form-create-account-password">Password:</label>
+                                    <label for="form-create-account-password">Šifra:</label>
                                     <input type="password" className="form-control" id="form-create-account-password" required />
                                 </div>
                                 <div className="form-group">
-                                    <label for="form-create-account-confirm-password">Confirm Password:</label>
+                                    <label for="form-create-account-confirm-password">Ponovi Šifru:</label>
                                     <input type="password" className="form-control" id="form-create-account-confirm-password" required />
                                 </div>
                                 <div className="checkbox pull-left">
                                     <label>
-                                        <input type="checkbox" id="account-type-newsletter" name="account-newsletter" />Receive Newsletter
+                                        <input type="checkbox" id="account-type-newsletter" name="account-newsletter" />Prijavi se za obaveštenja
                                      </label>
                                 </div>
                                 <div className="form-group clearfix">
-                                    <button type="submit" className="btn pull-right btn-default" id="account-submit">Create an Account</button>
+                                    <button type="submit" className="btn pull-right btn-default" id="account-submit">Napravi Nalog</button>
                                 </div>
                             </form>
                             <hr />
                             <div className="center">
-                                <figure className="note">By clicking the “Create an Account” button you agree with our <a href="terms-conditions.html">Terms and conditions</a></figure>
+                                <figure className="note">kreiranjem naloga prihvatate opste uslove korisćenja <a href="terms-conditions.html">Opšti uslovi korišćenja</a></figure>
                             </div>
                         </div>
                     </div>
